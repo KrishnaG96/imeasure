@@ -4,7 +4,6 @@ $("document").ready(function() {
   total = 0;
 
   $("#btnSubmit").click(function tiles() {
-    // console.log($(".room-section").html());
     if ($(".room-section").html() == 0) {
       alert("select any one the image");
       //flag=0;
