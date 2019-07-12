@@ -1,0 +1,1338 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Measure It Flooring Calculator By Creating Your Space </title>
+    <meta name="description" content="Measure It Flooring Calculator By Creating Your Space" >
+    <meta name="keywords" content="creating your space, measures quare, flooring calculator, takeoff, estimating, measure" >
+
+    <link href="css/jquery-ui-1.10.4.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">
+            <a href="javascript:;" style="margin-right:5px;">
+                <!-- <img src="/content/images/logo.png" style="vertical-align:middle; height:56px;" /> -->
+            </a><span style="display:inline-block; margin-top:10px;">I-MEASURE</span>
+        </h1>
+
+        <div class="form-table">
+            <div class="form-item sub-title">
+                <span class="text">Start By Selecting Your Product Type</span>
+                <select id="productTypeSelect" class="form-control" style="width:115px;margin-left:10px;">
+                    <option>Carpet</option>
+                    <option>Vinyl</option>
+                    <option>Tile</option>
+                    <option value="HardWood">Wood</option>
+                    <option>Laminate</option>
+                </select>
+
+                <span style="float:right"><b><a class="linkAdvanced" href="javascript:;">Advanced</a></b></span>
+            </div>
+
+            <div class="advance-row">
+                <div>
+                    <div class="form-item">
+                        <input id="defaultMeasure" type="hidden" value="Imperial" />
+                        <div class="item-label"> Measure System</div>
+                        <div class="item-content">
+                            <select class="form-control" id="measureSystemSelect">
+                                <option>Imperial</option>
+                                <!-- <option>Metric</option> -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-item">
+                        <div class="item-label required"> Image Width</div>
+                        <div class="item-content">
+                            <input type="text" class="form-control number-input" id="imageWidthText" value="1024" maxlength="4" required> Pixel
+                        </div>
+                    </div>
+                </div>
+
+                    <div class="product-info active" data-id="carpet" data-type="Carpet">
+                    <div>
+    <div class="form-item" data-key="Direction" data-setting="true">
+        <div class="item-label"> Layout Direction</div>
+        <div class="item-content">
+            <select class="form-control">
+                <option value="Auto">Optimized</option>
+                <option>Horizontal</option>
+                <option>Vertical</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="CutMargin" data-type="number" data-setting="true">
+        <div class="item-label"> Cut Margin</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="0" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option selected>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="0" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="MaxTSeamCount" data-setting="true">
+        <div class="item-label required"> Max T-Seam Count</div>
+        <div class="item-content">
+            <input type="text" class="form-control number-input" value="2" required>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="form-item" data-key="Width" data-type="number">
+        <div class="item-label required"> Roll Width</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="12" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="3.66" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="HoriRepeat" data-type="number">
+        <div class="item-label"> Horizontal Repeat</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="0" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="0" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="VertRepeat" data-type="number">
+        <div class="item-label"> Vertical Repeat</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="0" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="0" required> M
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="form-item" data-key="Length" data-type="number">
+        <div class="item-label required"> Roll Length</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="150" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="45.72" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="HoriDrop" data-type="number">
+        <div class="item-label"> Horizontal Drop</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="0" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="0" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="VertDrop" data-type="number">
+        <div class="item-label"> Vertical Drop</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="0" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="0" required> M
+            </div>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                    <div class="product-info hidden" data-id="vinyl" data-type="Vinyl">
+                     <div>
+    <div class="form-item" data-key="Direction" data-setting="true">
+        <div class="item-label"> Layout Direction</div>
+        <div class="item-content">
+            <select class="form-control">
+                <option value="Auto">Optimized</option>
+                <option>Horizontal</option>
+                <option>Vertical</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="CutMargin" data-type="number" data-setting="true">
+        <div class="item-label"> Cut Margin</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="0" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option selected>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="0" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="MaxTSeamCount" data-setting="true">
+        <div class="item-label required"> Max T-Seam Count</div>
+        <div class="item-content">
+            <input type="text" class="form-control number-input" value="0" required>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="form-item" data-key="Width" data-type="number">
+        <div class="item-label required"> Roll Width</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="12" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="3.66" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="HoriRepeat" data-type="number">
+        <div class="item-label"> Horizontal Repeat</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="0" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="0" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="VertRepeat" data-type="number">
+        <div class="item-label"> Vertical Repeat</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="0" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="0" required> M
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="form-item" data-key="Length" data-type="number">
+        <div class="item-label required"> Roll Length</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="150" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="45.72" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="HoriDrop" data-type="number">
+        <div class="item-label"> Horizontal Drop</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="0" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="0" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="VertDrop" data-type="number">
+        <div class="item-label"> Vertical Drop</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="0" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="0" required> M
+            </div>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                    <div class="product-info hidden" data-id="tile" data-type="Tile">
+                    <div>
+    <div class="form-item" data-key="TileCalcMethod">
+        <div class="item-label">Calculate Method</div>
+        <div class="item-content">
+            <select id="tileCalcMethodSelect" class="form-control" style="width:110px;">
+                <option title="Simple add a percentage to net area.">WasteAddon</option>
+                <option title="If cut area is less or equal 50%, it's counted as 0.5 piece, otherwise 1 piece.">HalfReuse</option>
+                <option title="Cut and fit to calculate tile piece count.">CutAndFit</option>
+            </select>
+            <span class="inner-form-item" id="tileWasteAddon" data-key="WasteAddon"  data-type="percent">
+                <input type="text" class="form-control decimal-input" value="5" maxlength="5" style="width:50px;" required="">
+                <label>%</label>
+            </span>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="LayoutDirection">
+        <div class="item-label">Layout Direction</div>
+        <div class="item-content">
+            <select class="form-control" style="width:60px;">
+                <option value="0" selected>0&deg;</option>
+                <option value="45">45&deg;</option>
+                <option value="90">90&deg;</option>
+                <option value="135">135&deg;</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="StartPoint">
+        <div class="item-label">Start Point</div>
+        <div class="item-content">
+            <select class="form-control" style="width:120px;">
+                <option>Center</option>
+                <option>Top-Left</option>
+                <option>Top-Right</option>
+                <option>Bottom-Left</option>
+                <option>Bottom-Right</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="form-item" data-key="Width" data-type="number">
+        <div class="item-label required"> Tile Width</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="2" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="0.61" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="Length" data-type="number">
+        <div class="item-label required"> Tile Length</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="2" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="0.61" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="GroutWidth" data-setting="true" data-type="number">
+        <div class="item-label required"> Grout</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control decimal-input" value="0.25" maxlength="5" style="width:50px;" required>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="6.35" required> MM
+            </div>
+        </div>
+    </div>
+</div>
+
+
+                   </div>
+                    <div class="product-info hidden" data-id="wood" data-type="HardWood">
+
+<div>
+    <div class="form-item" data-key="Width" data-type="number">
+        <div class="item-label required"> Width</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="0" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option selected>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="0" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="Length" data-type="number">
+        <div class="item-label required"> Length</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input"  value="7" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input" >
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="2.13" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item"  data-key="WasteAddon" data-type="percent">
+        <div class="item-label required" title="Usage = NetArea * (1 + WasteAddon)"> Waste Addon</div>
+        <div class="item-content">
+            <input type="text" class="form-control decimal-input" value="5" maxlength="5" style="width:50px;" required>
+            <label>%</label>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                    <div class="product-info hidden" data-id="laminate" data-type="Laminate">
+
+<div>
+    <div class="form-item" data-key="Width" data-type="number">
+        <div class="item-label required"> Width</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input" value="0" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option selected>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="0" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item" data-key="Length" data-type="number">
+        <div class="item-label required"> Length</div>
+        <div class="item-content">
+            <div class="imperialDiv">
+                <input type="text" class="form-control number-input"  value="7" required>
+                <label>'</label>
+                <select type="text" class="form-control number-input" >
+                            <option selected>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                </select>
+                <label>''</label>
+            </div>
+            <div class="metricDiv">
+                <input type="text" class="form-control decimal-input" value="2.13" required> M
+            </div>
+        </div>
+    </div>
+
+    <div class="form-item"  data-key="WasteAddon" data-type="percent">
+        <div class="item-label required" title="Usage = NetArea * (1 + WasteAddon)"> Waste Addon</div>
+        <div class="item-content">
+            <input type="text" class="form-control decimal-input" value="5" maxlength="5" style="width:50px;" required>
+            <label>%</label>
+        </div>
+    </div>
+</div>
+
+                    </div>
+            </div>
+
+            <div class="img-container">
+                <span class="text">Now Select Your Room Shape</span>
+                <a class="linkAddRoom" href="javascript:;"><img src="images/rectangle.png"  title="Rectangle"/></a>
+                <a class="linkAddLShape" href="javascript:;"><img src="images/l-shape.png" title="L-Shape" style="transform:rotate(90deg)" /></a>
+                <a class="linkAddLShape2" href="javascript:;"><img src="images/l-shape.png" title="L-Shape" style="transform:rotate(180deg)" /></a>
+                <a class="linkAddConvex" href="javascript:;"><img src="images/convex.png?v=1" title="Convex" /></a>
+                <a class="linkAddConcave" href="javascript:;"><img src="images/concave.png?v=1" title="Concave" /></a>
+                <a class="linkAddStair" href="javascript:;"><img src="images/stair.png" title="Stair. No graphic will appear, just fill in the information needed to get your estimate" /></a>
+            </div>
+
+            <div class="room-section">
+
+            </div>
+
+            <div class="btn-group">
+                <div class="area-item" style="margin-bottom:15px;display:none;"><b>Total Area: <span id="total-value">0.00</span><span class="area-unit">SF</span></b></div>
+                <input type="button" class="btn btn-green" id="btnSubmit" value="Get Quantity Estimate and Layout" data-diagram="True" />
+            </div>
+            <p id="tile">
+              <br>
+            </p>
+
+
+
+        </div>
+
+<div class="estimate-section">
+    <ol class="breadcrumb">
+        <li><a href="javascript:;">1. Select Your Room Shape</a></li>
+        <li class="disabled"><a href="javascript:;">2. Quantity Estimate</a></li>
+    </ol>
+
+    <div class="email-section">
+        <p>
+            Below is the estimate report including layout and cut sheet.
+            You may request to receive an email copy.
+
+        </p>
+        <table>
+            <tr><td width="100"><span class="required"> Email(s):</span></td><td><input type="text" class="form-control" id="emailText" placeholder="if multiple, separated by comma" /></td></tr>
+            <tr>
+                <td></td>
+                <td>
+                    <div style="margin-top:5px;">
+                        <input type="button" class="btn btn-blue btn" id="btnSend" value="Email Estimate" />
+
+                    </div>
+                    <div style="margin:5px">
+                        <span id="message"></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <img id="imgEstimate" style="max-width:1024px;" />
+</div>
+    </div>
+    <div id="RectRoomTemplate" class="rectRoomItem roomItem hidden">
+  <div class="input-section">
+        <div class="form-item">
+            <div class="item-label"><a href="javascript:;" class="linkDelete">Delete</a>   Name</div>
+            <div class="item-content"><input type="text" class="form-control"></div>
+        </div>
+        <div style="display:inline-block;">
+            <div class="form-item">
+                <div class="item-label required"> Width</div><div class="item-content">
+                    <div class="imperialDiv">
+                        <input type="text" class="form-control number-input" value="20" required> <label>'</label>
+                        <select type="text" class="form-control number-input"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option></select> <label>"</label>
+                    </div>
+                    <div class="metricDiv" style="display: none;"><input type="text" class="form-control decimal-input" value="6.10" required> M</div>
+                </div>
+            </div> <div class="form-item">
+                <div class="item-label required"> Length</div>
+                <div class="item-content">
+                    <div class="imperialDiv">
+                        <input type="text" class="form-control number-input" value="12" required> <label>'</label>
+                        <select type="text" class="form-control number-input"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option></select> <label>"</label>
+                    </div> <div class="metricDiv" style="display: none;"><input type="text" class="form-control decimal-input" value="3.66" required> M</div>
+                </div>
+            </div>
+        </div>
+   </div>
+   <div class="ui-widget-content shape-container">
+        <div data-id="resizable1" class="ui-state-active resizable">
+            <div class="resize-label resize-label-e"></div>
+            <div class="resize-label resize-label-n"></div>
+        </div>
+    </div>
+</div>
+
+<div id="LShapeTemplate" class="LShapeRoomItem roomItem hidden">
+    <div class="input-section">
+        <div class="form-item">
+            <div class="item-label"><a href="javascript:;" class="linkDelete">Delete</a>  Name</div>
+            <div class="item-content"><input type="text" class="form-control"></div>
+        </div>
+        <div style="display:inline-block;">
+            <div class="form-item">
+                <div class="item-label required">L1 Width</div>
+                <div class="item-content">
+                    <div class="imperialDiv">
+                        <input type="text" class="form-control number-input" value="8" required>
+                        <label>'</label>
+                        <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                        </select>
+                        <label>''</label>
+                    </div>
+                    <div class="metricDiv">
+                        <input type="text" class="form-control decimal-input" value="2.44" required> M
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="item-label required">L1 Length</div>
+                <div class="item-content">
+                    <div class="imperialDiv">
+                        <input type="text" class="form-control number-input" value="20" required>
+                        <label>'</label>
+                        <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                        </select>
+                        <label>''</label>
+                    </div>
+                    <div class="metricDiv">
+                        <input type="text" class="form-control decimal-input" value="6.10" required> M
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-item" style="height:0;margin:0;">
+            <div class="item-label"></div>
+            <div class="item-content"></div>
+        </div>
+        <div style="display:inline-block;">
+            <div class="form-item">
+                <div class="item-label required">L2 Width</div>
+                <div class="item-content">
+                    <div class="imperialDiv">
+                        <input type="text" class="form-control number-input" value="12" required>
+                        <label>'</label>
+                        <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                        </select>
+                        <label>''</label>
+                    </div>
+                    <div class="metricDiv">
+                        <input type="text" class="form-control decimal-input" value="3.66" required> M
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="item-label required">L2 Length</div>
+                <div class="item-content">
+                    <div class="imperialDiv">
+                        <input type="text" class="form-control number-input" value="8" required>
+                        <label>'</label>
+                        <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                        </select>
+                        <label>''</label>
+                    </div>
+                    <div class="metricDiv">
+                        <input type="text" class="form-control decimal-input" value="2.44" required> M
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-widget-content shape-container">
+        <div data-id="resizable1" class="ui-state-active resizable">
+            <div class="resize-name">L1</div>
+            <div class="resize-label resize-label-w"></div>
+            <div class="resize-label resize-label-s"></div>
+        </div>
+        <div data-id="resizable2" class="ui-state-active resizable">
+            <div  class="resize-name">L2</div>
+            <div class="resize-label resize-label-e"></div>
+            <div class="resize-label resize-label-s"></div>
+        </div>
+        <div class="resize-label resize-label-tw"></div>
+    </div>
+    <div class="area-item" style="display:none;">
+        <b>Area: <span class="area-value"></span><span class="area-unit">SF</span></b>
+    </div>
+</div>
+
+<div id="ConvexTemplate" class="convexRoomItem roomItem hidden">
+    <div class="input-section">
+        <div class="form-item">
+            <div class="item-label"><a href="javascript:;" class="linkDelete">Delete</a>  Name</div>
+            <div class="item-content"><input type="text" class="form-control"></div>
+        </div>
+        <div style="display:inline-block;">
+            <div class="form-item">
+                <div class="item-label required">L1 Width</div>
+                <div class="item-content">
+                    <div class="imperialDiv">
+                        <input type="text" class="form-control number-input" value="8" required>
+                        <label>'</label>
+                        <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                        </select>
+                        <label>''</label>
+                    </div>
+                    <div class="metricDiv">
+                        <input type="text" class="form-control decimal-input" value="2.44" required> M
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="item-label required">L1 Length</div>
+                <div class="item-content">
+                    <div class="imperialDiv">
+                        <input type="text" class="form-control number-input" value="20" required>
+                        <label>'</label>
+                        <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                        </select>
+                        <label>''</label>
+                    </div>
+                    <div class="metricDiv">
+                        <input type="text" class="form-control decimal-input" value="6.10" required> M
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-item" style="height:0;margin:0;">
+            <div class="item-label"></div>
+            <div class="item-content"></div>
+        </div>
+        <div style="display:inline-block;">
+            <div class="form-item">
+                <div class="item-label required">L2 Width</div>
+                <div class="item-content">
+                    <div class="imperialDiv">
+                        <input type="text" class="form-control number-input" value="12" required>
+                        <label>'</label>
+                        <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                        </select>
+                        <label>''</label>
+                    </div>
+                    <div class="metricDiv">
+                        <input type="text" class="form-control decimal-input" value="3.66" required> M
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="item-label required">L2 Length</div>
+                <div class="item-content">
+                    <div class="imperialDiv">
+                        <input type="text" class="form-control number-input" value="8" required>
+                        <label>'</label>
+                        <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                        </select>
+                        <label>''</label>
+                    </div>
+                    <div class="metricDiv">
+                        <input type="text" class="form-control decimal-input" value="2.44" required> M
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-widget-content shape-container">
+        <div data-id="resizable1" class="ui-state-active resizable">
+            <div class="resize-name">L1</div>
+            <div class="resize-label resize-label-w"></div>
+            <div class="resize-label resize-label-s"></div>
+            <div class="resize-label resize-label-e1"></div>
+            <div class="resize-label resize-label-e2"></div>
+        </div>
+        <div data-id="resizable2" class="ui-state-active resizable">
+            <div  class="resize-name">L2</div>
+            <div class="resize-label resize-label-e"></div>
+            <div class="resize-label resize-label-s"></div>
+        </div>
+    </div>
+    <div class="area-item" style="display:none;">
+        <b>Area: <span class="area-value"></span><span class="area-unit">SF</span></b>
+    </div>
+</div>
+
+<div id="ConcaveTemplate" class="concaveRoomItem roomItem hidden">
+    <div class="input-section">
+        <div class="form-item">
+            <div class="item-label"><a href="javascript:;" class="linkDelete">Delete</a>  Name</div>
+            <div class="item-content"><input type="text" class="form-control"></div>
+        </div>
+        <div style="display:inline-block;">
+            <div class="form-item">
+                <div class="item-label required">L1 Width</div>
+                <div class="item-content">
+                    <div class="imperialDiv">
+                        <input type="text" class="form-control number-input" value="8" required>
+                        <label>'</label>
+                        <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                        </select>
+                        <label>''</label>
+                    </div>
+                    <div class="metricDiv">
+                        <input type="text" class="form-control decimal-input" value="2.44" required> M
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="item-label required">L1 Length</div>
+                <div class="item-content">
+                    <div class="imperialDiv">
+                        <input type="text" class="form-control number-input" value="20" required>
+                        <label>'</label>
+                        <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                        </select>
+                        <label>''</label>
+                    </div>
+                    <div class="metricDiv">
+                        <input type="text" class="form-control decimal-input" value="6.10" required> M
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-item" style="height:0;margin:0;">
+            <div class="item-label"></div>
+            <div class="item-content"></div>
+        </div>
+        <div style="display:inline-block;">
+            <div class="form-item">
+                <div class="item-label required">L2 Width</div>
+                <div class="item-content">
+                    <div class="imperialDiv">
+                        <input type="text" class="form-control number-input" value="12" required>
+                        <label>'</label>
+                        <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                        </select>
+                        <label>''</label>
+                    </div>
+                    <div class="metricDiv">
+                        <input type="text" class="form-control decimal-input" value="3.66" required> M
+                    </div>
+                </div>
+            </div>
+            <div class="form-item">
+                <div class="item-label required">L2 Length</div>
+                <div class="item-content">
+                    <div class="imperialDiv">
+                        <input type="text" class="form-control number-input" value="8" required>
+                        <label>'</label>
+                        <select type="text" class="form-control number-input">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                        </select>
+                        <label>''</label>
+                    </div>
+                    <div class="metricDiv">
+                        <input type="text" class="form-control decimal-input" value="2.44" required> M
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-widget-content shape-container">
+        <div data-id="resizable1" class="ui-state-active resizable">
+            <div class="resize-name">L1</div>
+            <div class="resize-label resize-label-w"></div>
+            <div class="resize-label resize-label-s"></div>
+            <div class="resize-label resize-label-e1"></div>
+            <div class="resize-label resize-label-e2"></div>
+            <div data-id="resizable2" class="ui-state-active resizable" style="background:#fff !important; position: absolute; right:0;">
+                <div  class="resize-name">L2</div>
+                <div class="resize-label resize-label-w"></div>
+                <div class="resize-label resize-label-s" style="bottom:-30px;"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="area-item" style="display:none;">
+        <b>Area: <span class="area-value"></span><span class="area-unit">SF</span></b>
+    </div>
+</div>
+
+<div id="StairTemplate" class="stairItem roomItem hidden">
+    <div class="form-item">
+        <div class="item-label"><a href="javascript:;" class="linkDelete">Delete</a>   Name</div>
+        <div class="item-content"><input type="text" class="form-control"></div>
+    </div>
+    <div style="display:inline-block;">
+        <div class="form-item">
+            <div class="item-label required"> Width</div><div class="item-content">
+                <div class="imperialDiv">
+                    <input type="text" class="form-control number-input" required="" value="3"> <label>'</label>
+                    <select type="text" class="form-control number-input"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option></select> <label>"</label>
+                </div>
+                <div class="metricDiv" style="display: none;"><input type="text" class="form-control decimal-input" value="0.91" required=""> M</div>
+            </div>
+        </div>
+        <div class="form-item">
+            <div class="item-label required"> Steps</div>
+            <div class="item-content">
+                <input type="text" class="form-control number-input" required="" value="10">
+            </div>
+        </div>
+    </div>
+     <div class="form-item">
+        <div class="item-label"></div>
+        <div class="item-content">
+            <!-- <a class="stairHelpLink" href="javascript:;">What's Width/Tread/Riser?</a> -->
+            <div class="stairImg" style="position:absolute;display:none;z-index:9999;">
+                    <img src="images/stair-desc.png" style="vertical-align: text-top; width: 180px;">
+            </div>
+        </div>
+    </div>
+    <div style="display:inline-block;">
+        <div class="form-item">
+            <div class="item-label required"> Tread</div><div class="item-content">
+                <div class="imperialDiv">
+                    <input type="text" class="form-control number-input" required="" value="0"> <label>'</label>
+                    <select type="text" class="form-control number-input"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option selected>11</option></select> <label>"</label>
+                </div>
+                <div class="metricDiv" style="display: none;"><input type="text" class="form-control decimal-input" value="0.28" required=""> M</div>
+            </div>
+        </div> <div class="form-item">
+            <div class="item-label required"> Riser</div>
+            <div class="item-content">
+                <div class="imperialDiv">
+                    <input type="text" class="form-control number-input" required="" value="0"> <label>'</label>
+                    <select type="text" class="form-control number-input"><option>0</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option selected>7</option><option>8</option><option>9</option><option>10</option><option>11</option></select> <label>"</label>
+                </div> <div class="metricDiv" style="display: none;"><input type="text" class="form-control decimal-input" value="0.18" required=""> M</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="footer">
+    <!-- Disclaimer:<br />
+    This is just an estimate, please have your professional measure for the exact amount of waste and other factors. -->
+</div>
+    <script src="script/one.js"></script>
+
+    <script src="script/two.js"></script>
+    <script src="script/krish.js" ></script>
+
+</body>
+</html>
