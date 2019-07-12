@@ -1,6 +1,5 @@
 $("document").ready(function() {
   var arr = [];
-  var flag = 0;
   total = 0;
 
   $("#btnSubmit").click(function tiles() {
@@ -8,8 +7,6 @@ $("document").ready(function() {
       alert("select any one the image");
       //flag=0;
     }
-    //if (flag == $(".room-section > div").length) {
-    //  alert("select another room")
     if ($("#productTypeSelect").val() == "Tile" && $(".room-section ").find(".rectRoomItem ").length) {
       alert("you have selected");
       //room width and length calc
@@ -32,11 +29,10 @@ $("document").ready(function() {
       var tlength = parseInt(tlen) + parseFloat((tleni / 12));
       var tile = Math.floor((twidth * tlength));
       var tot = rsquare / tile;
-      if($(".product-info.hidden.active").find("input ,select")[0].value=="WasteAddon")
-      {
-        let wasteA=$(".product-info.hidden.active").find("input ,select")[1].value;
-        let addon=(tot*wasteA)/100;
-        var tottile=Math.ceil(addon+tot);
+      if ($(".product-info.hidden.active").find("input ,select")[0].value == "WasteAddon") {
+        let wasteA = $(".product-info.hidden.active").find("input ,select")[1].value;
+        let addon = (tot * wasteA) / 100;
+        var tottile = Math.ceil(addon + tot);
         arr.push(tottile);
 
       }
@@ -47,15 +43,16 @@ $("document").ready(function() {
         var r = 1;
 
         console.log("hai one" + arr[i]);
-          console.log(i, arr.length);
+        console.log(i, arr.length);
 
         tvalue.innerHTML += "Required tiles for your room is:" + Math.round(arr[i]) + "</br>";
         total += Math.round(arr[i]);
       }
+      arr = [];
       tvalue.innerHTML += "Total tiles for your selected rooms are:" + (total);
 
       //Grout
-    /*  var mg = tot * tg;
+      /*  var mg = tot * tg;
       var ntile = rsquare - mg;
       console.log(arr);
       var nvalue = ntile / tile;
@@ -92,7 +89,8 @@ $("document").ready(function() {
       }
       tvalue.innerHTML += "Total tiles for your selected rooms are:" + (total);
 
-  */  } else if ($("#productTypeSelect").val() == "Tile" && $(".room-section ").find(".LShapeRoomItem").length || $(".room-section ").find(".convexRoomItem").length) {
+  */
+    } else if ($("#productTypeSelect").val() == "Tile" && $(".room-section ").find(".LShapeRoomItem").length || $(".room-section ").find(".convexRoomItem").length) {
       //room width and length calc
       var lshapew1 = parseInt($(".room-section .imperialDiv").find("input,select")[0].value) + parseFloat($(".room-section .imperialDiv").find("input,select")[1].value / 12);
       console.log(lshapew1);
@@ -136,10 +134,9 @@ $("document").ready(function() {
       }
       */
 
-      if($(".product-info.hidden.active").find("input ,select")[0].value=="WasteAddon")
-      {
-        let wasteA=$(".product-info.hidden.active").find("input ,select")[1].value;
-        let addon=(totalsize*wasteA)/100;
+      if ($(".product-info.hidden.active").find("input ,select")[0].value == "WasteAddon") {
+        let wasteA = $(".product-info.hidden.active").find("input ,select")[1].value;
+        let addon = (totalsize * wasteA) / 100;
         alert(addon);
       }
 
@@ -177,20 +174,19 @@ $("document").ready(function() {
       var tlength = parseInt(tlen) + parseFloat((tleni / 12));
       var tile = Math.ceil((twidth * tlength));
       var lshapecal = totalsize / tile;
-      if($(".product-info.hidden.active").find("input ,select")[0].value=="WasteAddon")
-      {
-        let wasteA=$(".product-info.hidden.active").find("input ,select")[1].value;
-        let addon=(lshapecal*wasteA)/100;
+      if ($(".product-info.hidden.active").find("input ,select")[0].value == "WasteAddon") {
+        let wasteA = $(".product-info.hidden.active").find("input ,select")[1].value;
+        let addon = (lshapecal * wasteA) / 100;
         alert(addon);
       }
 
-            tvalue.innerHTML = "";
-            for (let i = 0; i < arr.length; i++) {
+      tvalue.innerHTML = "";
+      for (let i = 0; i < arr.length; i++) {
 
-              tvalue.innerHTML += "Required tiles for your room is:" + Math.round(arr[i]) + "</br>";
-              total += Math.round(arr[i]);
-            }
-            tvalue.innerHTML += "Total tiles for your selected rooms are:" + (total);
+        tvalue.innerHTML += "Required tiles for your room is:" + Math.round(arr[i]) + "</br>";
+        total += Math.round(arr[i]);
+      }
+      tvalue.innerHTML += "Total tiles for your selected rooms are:" + (total);
       /*
       var gcalc = lshapecal * tg;
       var gminus = totalsize - gcalc;
@@ -223,11 +219,11 @@ $("document").ready(function() {
       */
 
     } else if ($("#productTypeSelect").val() == "Tile" && $(".room-section ").find(".stairItem").length) {
-      var sw= parseInt($(".room-section ").find(".stairItem").find("input , select")[1].value) + parseFloat($(".room-section ").find(".stairItem").find("input , select")[2].value/12);
-      var steps=parseInt($(".room-section ").find(".stairItem").find("input , select")[4].value);
-      var tred=parseInt($(".room-section ").find(".stairItem").find("input , select")[5].value) + parseFloat($(".room-section ").find(".stairItem").find("input , select")[6].value/12) ;
-      var riser=parseInt($(".room-section ").find(".stairItem").find("input , select")[8].value) + parseFloat($(".room-section ").find(".stairItem").find("input , select")[9].value/12);
-      var area=(tred+riser)*sw*steps;
+      var sw = parseInt($(".room-section ").find(".stairItem").find("input , select")[1].value) + parseFloat($(".room-section ").find(".stairItem").find("input , select")[2].value / 12);
+      var steps = parseInt($(".room-section ").find(".stairItem").find("input , select")[4].value);
+      var tred = parseInt($(".room-section ").find(".stairItem").find("input , select")[5].value) + parseFloat($(".room-section ").find(".stairItem").find("input , select")[6].value / 12);
+      var riser = parseInt($(".room-section ").find(".stairItem").find("input , select")[8].value) + parseFloat($(".room-section ").find(".stairItem").find("input , select")[9].value / 12);
+      var area = (tred + riser) * sw * steps;
       console.log(area);
       var twid = $(".product-info.hidden.active .imperialDiv").find("input,select")[0].value;
       var twidi = $(".product-info.hidden.active .imperialDiv").find("input,select")[1].value;
@@ -238,6 +234,27 @@ $("document").ready(function() {
       var tlength = parseInt(tlen) + parseFloat((tleni / 12));
       var tile = Math.ceil((twidth * tlength));
       var totat = area / tile;
+      if ($(".product-info.hidden.active").find("input ,select")[0].value == "WasteAddon") {
+        let wasteA = $(".product-info.hidden.active").find("input ,select")[1].value;
+        let addon = (totat * wasteA) / 100;
+        var tottile = Math.ceil(addon + totat);
+        arr.push(totat);
+
+      }
+      var tvalue = document.getElementById("tile");
+      tvalue.innerHTML = "";
+      for (let i = 0; i < arr.length; i++) {
+        var r = 1;
+
+        console.log("hai one" +" "+ arr[i]);
+        console.log(i, arr.length);
+
+        tvalue.innerHTML += "Required tiles for your stairs are:" + Math.round(arr[i]) + "</br>";
+        total += Math.round(arr[i]);
+      }
+      arr=[];
+      tvalue.innerHTML += "Total tiles for your selected rooms are:" + (total);
+      /*
       var gcalc = totat * tg;
       var gminus = area - gcalc;
       var finalval = Math.round(gminus / tile);
@@ -269,7 +286,8 @@ $("document").ready(function() {
 }
   tvalue.innerHTML += "Total tiles for your selected rooms are:" + (total);
   arr=[];
-}
+  */
+    }
 
   });
 });
