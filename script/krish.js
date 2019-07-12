@@ -1,7 +1,6 @@
 $("document").ready(function() {
   var arr = [];
   total = 0;
-
   $("#btnSubmit").click(function tiles() {
     if ($(".room-section").html() == 0) {
       alert("select any one the image");
@@ -34,23 +33,19 @@ $("document").ready(function() {
         let addon = (tot * wasteA) / 100;
         var tottile = Math.ceil(addon + tot);
         arr.push(tottile);
-
       }
       alert(tot);
       var tvalue = document.getElementById("tile");
       tvalue.innerHTML = "";
       for (let i = 0; i < arr.length; i++) {
         var r = 1;
-
         console.log("hai one" + arr[i]);
         console.log(i, arr.length);
-
         tvalue.innerHTML += "Required tiles for your room is:" + Math.round(arr[i]) + "</br>";
         total += Math.round(arr[i]);
       }
       arr = [];
       tvalue.innerHTML += "Total tiles for your selected rooms are:" + (total);
-
       //Grout
       /*  var mg = tot * tg;
       var ntile = rsquare - mg;
@@ -63,32 +58,23 @@ $("document").ready(function() {
         flag++;
         console.log("rem" + flag);
         console.log("roomval" + $(".room-section > div").length);
-
         arr.push(nvalue++)
-
-      } else {
-
+      }
+      else {
         flag++;
         arr.push(nvalue);
         console.log(arr);
-
       }
       tvalue.innerHTML = "";
       for (let i = 0; i < arr.length; i++) {
         var r = 1;
-
-
-
         console.log("hai one" + arr[i]);
         console.log(i, arr.length);
-
         tvalue.innerHTML += "Required tiles for your room is:" + Math.round(arr[i]) + "</br>";
         total += Math.round(arr[i]);
-
         "\n";
       }
       tvalue.innerHTML += "Total tiles for your selected rooms are:" + (total);
-
   */
     } else if ($("#productTypeSelect").val() == "Tile" && $(".room-section ").find(".LShapeRoomItem").length || $(".room-section ").find(".convexRoomItem").length) {
       //room width and length calc
@@ -106,7 +92,6 @@ $("document").ready(function() {
       var tlen = $(".product-info.hidden.active .imperialDiv").find("input,select")[2].value;
       var tleni = $(".product-info.hidden.active .imperialDiv").find("input,select")[3].value;
       var tg = $(".product-info.hidden.active .imperialDiv").find("input")[2].value;
-
       var twidth = parseInt(twid) + parseFloat((twidi / 12));
       var tlength = parseInt(tlen) + parseFloat((tleni / 12));
       var tile = Math.ceil((twidth * tlength));
@@ -133,16 +118,11 @@ $("document").ready(function() {
 
       }
       */
-
       if ($(".product-info.hidden.active").find("input ,select")[0].value == "WasteAddon") {
         let wasteA = $(".product-info.hidden.active").find("input ,select")[1].value;
         let addon = (totalsize * wasteA) / 100;
         alert(addon);
       }
-
-
-
-
       tvalue.innerHTML = "";
       for (let i = 0; i < arr.length; i++) {
         var r = 1;
@@ -152,8 +132,6 @@ $("document").ready(function() {
         total += Math.round(arr[i]);
       }
       tvalue.innerHTML += "Total tiles for your selected rooms are:" + (total);
-
-
     } else if ($("#productTypeSelect").val() == "Tile" && $(".room-section ").find(".concaveRoomItem").length) {
       var lshapew1 = parseInt($(".room-section .imperialDiv").find("input,select")[0].value) + parseFloat($(".room-section .imperialDiv").find("input,select")[1].value / 12);
       console.log(lshapew1);
@@ -163,7 +141,6 @@ $("document").ready(function() {
       var totwl1 = Math.round(lshapew1 * lshapel1);
       var totwl2 = Math.round(lshapew2 * lshapel2);
       var totalsize = Math.round(totwl1 - totwl2);
-
       //tile calculate
       var twid = $(".product-info.hidden.active .imperialDiv").find("input,select")[0].value;
       var twidi = $(".product-info.hidden.active .imperialDiv").find("input,select")[1].value;
@@ -179,7 +156,6 @@ $("document").ready(function() {
         let addon = (lshapecal * wasteA) / 100;
         alert(addon);
       }
-
       tvalue.innerHTML = "";
       for (let i = 0; i < arr.length; i++) {
 
@@ -196,19 +172,14 @@ $("document").ready(function() {
       if (reminder == 0) {
         alert(finalval);
         arr.push(finalval)
-
-      } else {
+  } else {
         alert(finalval);
         arr.push(finalval++);
         console.log(arr);
-
       }
       tvalue.innerHTML = "";
       for (let i = 0; i < arr.length; i++) {
         var r = 1;
-
-
-
         console.log("hai one" + arr[i]);
         console.log(i, arr.length);
 
@@ -246,13 +217,13 @@ $("document").ready(function() {
       for (let i = 0; i < arr.length; i++) {
         var r = 1;
 
-        console.log("hai one" +" "+ arr[i]);
+        console.log("hai one" + " " + arr[i]);
         console.log(i, arr.length);
 
         tvalue.innerHTML += "Required tiles for your stairs are:" + Math.round(arr[i]) + "</br>";
         total += Math.round(arr[i]);
       }
-      arr=[];
+      arr = [];
       tvalue.innerHTML += "Total tiles for your selected rooms are:" + (total);
       /*
       var gcalc = totat * tg;
