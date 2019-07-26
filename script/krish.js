@@ -190,6 +190,11 @@ $("document").ready(function() {
       */
 
     } else if ($("#productTypeSelect").val() == "Tile" && $(".room-section ").find(".stairItem").length) {
+      var room=$(".room-section ").find(".stairItem").length;
+      console.log(room);
+      var swidth=parseInt($(".room-section ").find(".stairItem").find("input , select")[1].value);
+
+      var sinch=parseFloat($(".room-section ").find(".stairItem").find("input , select")[2].value);
       var sw = parseInt($(".room-section ").find(".stairItem").find("input , select")[1].value) + parseFloat($(".room-section ").find(".stairItem").find("input , select")[2].value / 12);
       var steps = parseInt($(".room-section ").find(".stairItem").find("input , select")[4].value);
       var tred = parseInt($(".room-section ").find(".stairItem").find("input , select")[5].value) + parseFloat($(".room-section ").find(".stairItem").find("input , select")[6].value / 12);
@@ -212,19 +217,27 @@ $("document").ready(function() {
         arr.push(totat);
 
       }
-      var tvalue = document.getElementById("tile");
-      tvalue.innerHTML = "";
+    //  var tvalue = document.getElementById("tile");
+      //tvalue.innerHTML = "";
       for (let i = 0; i < arr.length; i++) {
         var r = 1;
 
         console.log("hai one" + " " + arr[i]);
         console.log(i, arr.length);
+        var tr=document.getElementById('result');
+        tr.insertCell(0).innerHTML=$("#productTypeSelect").val();
+        tr.insertCell(1).innerHTML=swidth + " x "+sinch;
+        tr.insertCell(2).innerHTML="width"+twid +"x"+twidi+"<br>"+ "length "+tlen +" x"+tleni;
+        tr.insertCell(3).innerHTML=Math.round(arr[i]);
 
-        tvalue.innerHTML += "Required tiles for your stairs are:" + Math.round(arr[i]) + "</br>";
+      //  tvalue.innerHTML += "Required tiles for your stairs are:" + Math.round(arr[i]) + "</br>";
         total += Math.round(arr[i]);
       }
       arr = [];
-      tvalue.innerHTML += "Total tiles for your selected rooms are:" + (total);
+  //table for results
+
+
+    //  tvalue.innerHTML += "Total tiles for your selected rooms are:" + (total);
       /*
       var gcalc = totat * tg;
       var gminus = area - gcalc;
@@ -258,7 +271,7 @@ $("document").ready(function() {
   tvalue.innerHTML += "Total tiles for your selected rooms are:" + (total);
   arr=[];
   */
-    }
+}
 
   });
 });
