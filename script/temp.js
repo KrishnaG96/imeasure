@@ -3,11 +3,13 @@ var access={
  RectRoom:[],
  polygon:[],
  stairs:[],
+ concave:[],
 }
 $("#btnSubmit").click(function() {
   access.RectRoom=[]
   access.polygon=[]
   access.stairs=[]
+  access.concave=[]
   var tr = document.getElementById('mytable');
   tr.innerHTML = "<tbody> <tr><th>Room</th> <th>Product Type</th> <th>Room Size</th> <th>Tile Size</th> <th>required tiles</th> </tr> </tbody>";
   //Starting rectRoomItem
@@ -67,7 +69,7 @@ $("#btnSubmit").click(function() {
     access.FlooringProduct=flooring;
     access.RectRoom.push(height)
     access.startPoint=startPoint;
-    console.log(access);
+  //  console.log(access);
 
     }); //ending rectRoomItem
 
@@ -132,7 +134,7 @@ $("#btnSubmit").click(function() {
       access.startPoint=startPoint;
       access.stairs.push(height);
       access.FlooringProduct=flooring;
-      console.log(access);
+    //  console.log(access);
 
 
     }); //ending staircase
@@ -272,7 +274,7 @@ $("#btnSubmit").click(function() {
       access.startPoint=startPoint;
       access.polygon.push(height);
       access.FlooringProduct=flooring;
-      console.log(access);
+      //console.log(access);
 
     });
   }
@@ -340,9 +342,9 @@ $("#btnSubmit").click(function() {
           access.grout=parseFloat($(".product-info.hidden.active .imperialDiv").find("input")[2].value);
         access.Flooring=$("#productTypeSelect").val();
         access.startPoint=startPoint;
-        access.polygon.push(height);
+        access.concave.push(height);
         access.FlooringProduct=flooring;
-        console.log(access);
+        //console.log(access);
       });
     }
     //AJAX REQUEST
