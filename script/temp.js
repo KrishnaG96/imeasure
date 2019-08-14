@@ -4,6 +4,7 @@ var access={
  polygon:[],
  stairs:[],
  concave:[],
+ convex:[]
 }
 $("#btnSubmit").click(function() {
   access.RectRoom=[]
@@ -272,7 +273,7 @@ $("#btnSubmit").click(function() {
         access.grout=parseFloat($(".product-info.hidden.active .imperialDiv").find("input")[2].value);
       access.Flooring=$("#productTypeSelect").val();
       access.startPoint=startPoint;
-      access.polygon.push(height);
+      access.convex.push(height);
       access.FlooringProduct=flooring;
       //console.log(access);
 
